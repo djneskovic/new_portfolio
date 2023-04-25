@@ -3,6 +3,7 @@
 	<the-hero> </the-hero>
 	<the-skill></the-skill>
 	<the-projects></the-projects>
+	<the-contact></the-contact>
 </template>
 
 <script>
@@ -10,12 +11,14 @@ import TheNavigation from "./components/navigation/TheNavigation.vue";
 import TheHero from "./components/hero/TheHero.vue";
 import TheSkill from "./components/skills/TheSkills.vue";
 import TheProjects from "./components/sites/TheProjects.vue";
+import TheContact from "./components/contact/TheContact.vue";
 export default {
 	components: {
 		TheNavigation,
 		TheHero,
 		TheSkill,
 		TheProjects,
+		TheContact,
 	},
 };
 </script>
@@ -38,7 +41,7 @@ export default {
 body {
 	scroll-behavior: smooth;
 	font-family: "Press Start 2P", cursive;
-	background-color: var(--dark-green);
+	/* background-color: var(--dark-green); */
 }
 .container {
 	max-width: 1500px;

@@ -30,13 +30,19 @@
 							>
 						</li>
 						<li class="menu-list-item">
-							<a href="#" class="link" @click="close"
-								>Link1</a
+							<a
+								href="#projects"
+								class="link"
+								@click="close"
+								>PROJECTS</a
 							>
 						</li>
 						<li class="menu-list-item">
-							<a href="#" class="link" @click="close"
-								>Link1</a
+							<a
+								href="#contact"
+								class="link"
+								@click="close"
+								>CONTACT</a
 							>
 						</li>
 					</ul>

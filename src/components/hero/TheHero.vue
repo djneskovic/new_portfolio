@@ -10,7 +10,9 @@
 						Corporis eligendi vel magni quasi neque unde
 						harum?
 					</p>
-					<button class="hero-btn">Check my skills</button>
+					<a class="hero-btn" href="#projects"
+						>Check my projects</a
+					>
 				</div>
 
 				<spline-viewer
