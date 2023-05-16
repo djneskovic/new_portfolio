@@ -31,24 +31,26 @@ export default {
 	--orange: #e86a33;
 	--whiteish: #f2e3db;
 }
+
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	/* scroll-behavior: smooth; */
-	scroll-behavior: smooth;
 }
-body {
+
+html {
 	scroll-behavior: smooth;
+	scroll-padding-top: 90px;
+}
+
+body {
 	font-family: "Press Start 2P", cursive;
-	/* background-color: var(--dark-green); */
 }
 .container {
 	max-width: 1500px;
 	padding: 0 2rem;
 	margin: 0 auto;
 	min-height: 100%;
-	/* overflow: hidden; */
 }
 img {
 	height: 100%;

@@ -78,12 +78,10 @@ export default {
 <style scoped>
 #nav {
 	border-bottom: 1px solid var(--orange);
-	/* background-color: var(--dark-green); */
 	background: rgba(38, 58, 41, 0.8);
 	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 	backdrop-filter: blur(12px);
 	-webkit-backdrop-filter: blur(12px);
-	/* border: 1px solid rgba(255, 255, 255, 0.18); */
 	z-index: 30;
 	position: sticky;
 	top: 0;
