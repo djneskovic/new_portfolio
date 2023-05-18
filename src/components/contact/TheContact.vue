@@ -10,27 +10,51 @@
 							can send me a message
 						</p>
 					</div>
-					<form class="form">
+					<form class="form" @submit.prevent="submitForm()">
 						<label for="nome">Name:</label>
 						<input
 							type="text"
 							class="infos"
 							id="nome"
 							name="nome"
+							v-model.trim="name"
 						/>
 						<div class="mario"></div>
 						<label for="email">E-mail:</label>
-						<input type="email" id="email" name="email" />
+						<input
+							type="email"
+							id="email"
+							name="email"
+							v-model.trim="email"
+						/>
 						<label for="message">Message: </label>
 						<textarea
 							cols="35"
 							rows="10"
 							id="message"
 							class="message"
+							v-model="message"
 						></textarea>
 
-						<button type="submit">Send</button>
-						<button type="reset" id="limpar">Clear</button>
+						<p class="succesfull-form" v-if="succesfullForm">
+							Message sent. <br />
+							Thank you.
+						</p>
+
+						<p class="invalid-form" v-if="validForm">
+							Hey, <br />
+							Something is wrong, please check inputs.
+						</p>
+						<div class="btns">
+							<button type="submit">Send</button>
+							<button
+								type="reset"
+								@click="clearForm"
+								id="limpar"
+							>
+								Clear
+							</button>
+						</div>
 					</form>
 				</div>
 
@@ -135,7 +159,48 @@
 </template>
 
 <script>
-export default {};
+export default {
+	data() {
+		return {
+			name: "",
+			email: "",
+			message: "",
+			validForm: false,
+			succesfullForm: false,
+		};
+	},
+	methods: {
+		submitForm() {
+			if (!this.name || !this.email.includes("@") || !this.message) {
+				this.validForm = true;
+				this.succesfullForm = false;
+			} else {
+				this.$store.dispatch("contact/submitRequest", {
+					name: this.name,
+					email: this.email,
+					message: this.message,
+				});
+				this.succesfullForm = true;
+				this.name = "";
+				this.email = "";
+				this.message = "";
+			}
+
+			setTimeout(() => {
+				this.validForm = false;
+				this.succesfullForm = false;
+			}, 5000);
+		},
+
+		clearForm() {
+			this.validForm = false;
+			this.name = "";
+			this.email = "";
+			this.message = "";
+			this.succesfullForm = false;
+		},
+	},
+};
 </script>
 
 <style scoped>
@@ -189,6 +254,26 @@ export default {};
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+}
+
+.invalid-form {
+	font-size: 0.7rem;
+	text-align: center;
+	margin: 0.5rem 0 1rem;
+	line-height: 1.2rem;
+	color: #de5959;
+}
+
+.succesfull-form {
+	color: #de5959;
+	font-size: 1rem;
+	text-align: center;
+	margin: 0.3rem 0 1rem;
+	line-height: 1.2rem;
+}
+
+.btns {
+	text-align: center;
 }
 
 @media screen and (min-width: 820px) {

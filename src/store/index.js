@@ -1,5 +1,11 @@
 import { createStore } from "vuex";
 
-const store = createStore({});
+import contactModule from "./contact/index.js";
+
+const store = createStore({
+	modules: {
+		contact: contactModule,
+	},
+});
 
 export default store;

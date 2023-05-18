@@ -3,12 +3,12 @@
 		<div class="container">
 			<div class="hero" data-aos="zoom-in" data-aos-duration="1500">
 				<div class="hero-left">
-					<h1 class="hero-heading">Welcome</h1>
+					<h1 class="hero-heading">Hello Stranger</h1>
 					<p class="hero-text">
-						Lorem ipsum dolor sit amet consectetur,
-						adipisicing elit. Debitis quod labore maxime!
-						Corporis eligendi vel magni quasi neque unde
-						harum?
+						First time here? If you want to know who I am and
+						what my skills are, you can scroll down. <br />
+						If you want check my latest projects, smash that
+						button!!!
 					</p>
 					<a class="hero-btn" href="#projects"
 						>Check my projects</a
@@ -82,6 +82,7 @@ export default {};
 .hero-text {
 	font-size: 1.2rem;
 	margin: 2rem 0;
+	line-height: 1.5rem;
 }
 
 .hero-btn {
