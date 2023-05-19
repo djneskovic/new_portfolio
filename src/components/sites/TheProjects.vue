@@ -9,37 +9,55 @@
 				<div class="project-top">
 					<h2>Projects</h2>
 					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing
-						elit. Aspernatur, placeat.
+						Here you can find my latest projects I've been
+						working on. <br />
+						Hope you will like it.
 					</p>
 				</div>
 				<div class="cards">
 					<div class="card">
 						<div class="card-front">
 							<img src="../../assets/weather.png" alt="" />
-							<p class="subtitle">Weather App</p>
+							<a
+								class="subtitle"
+								href="https://stage-weather-app-by-djordje.netlify.app"
+								>Weather App</a
+							>
 						</div>
 						<div class="card-back">
 							<p>
-								Lorem ipsum dolor sit amet, consectetur
-								adipiscing elit.
+								Here you can register and you can check
+								weather in your country or town. Also
+								you can save your favorite city.
 							</p>
 
-							<a href="#">Check here</a>
+							<a
+								href="https://stage-weather-app-by-djordje.netlify.app"
+								>Check here</a
+							>
 						</div>
 					</div>
 					<div class="card">
 						<div class="card-front">
 							<img src="../../assets/recipe.png" alt="" />
-							<p class="subtitle">Recipe App</p>
+							<a
+								class="subtitle"
+								href="https://stage-recipe-app.netlify.app/mymeals"
+								>Recipe App</a
+							>
 						</div>
 						<div class="card-back">
 							<p>
-								Lorem ipsum dolor sit amet, consectetur
-								adipiscing elit.
+								You like to cook? Then this app is
+								perfect for you. You can explore
+								recepies or you can make and save your
+								own.
 							</p>
 
-							<a href="#">Check here</a>
+							<a
+								href="https://stage-recipe-app.netlify.app/mymeals"
+								>Check here</a
+							>
 						</div>
 					</div>
 					<div class="card">
@@ -174,6 +192,7 @@ export default {};
 
 .card-back p {
 	margin-bottom: 1rem;
+	font-size: 0.7rem;
 }
 
 .card:hover .card-front {

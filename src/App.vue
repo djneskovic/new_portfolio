@@ -45,6 +45,7 @@ html {
 
 body {
 	font-family: "Press Start 2P", cursive;
+	cursor: url("./assets/joystick.png"), auto;
 }
 .container {
 	max-width: 1500px;

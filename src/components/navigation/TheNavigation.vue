@@ -121,6 +121,14 @@ export default {
 	width: 100%;
 }
 
+ul:hover li {
+	filter: blur(5px);
+}
+
+ul li:hover {
+	filter: blur(0px);
+}
+
 .menu-list-item {
 	padding: 1rem 0;
 }
